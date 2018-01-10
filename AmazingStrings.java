@@ -21,7 +21,7 @@ public class AmazingStrings {
 			{
 				if((input[i]==input[i+1]))
 				{
-					i++;
+					i++; 
 					count++;
 				}
 			}
