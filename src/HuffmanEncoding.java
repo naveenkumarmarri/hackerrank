@@ -27,12 +27,12 @@ public class HuffmanEncoding
 	private static void Huffman(HashMap<Character, Integer> count_tracker) {
 		Set<Character> valid_keys = count_tracker.keySet();
 		Iterator<Entry<Character,Integer>> it = count_tracker.entrySet().iterator();
-		PriorityQueue<Node> queue = new PriorityQueue<Node>();
+		PriorityQueue<Node_1> queue = new PriorityQueue<Node_1>();
 		int total_sum = 0;
 		while(it.hasNext())
 		{
 			Map.Entry<Character,Integer> entry= (Entry<Character, Integer>) it.next();
-			queue.add(new Node(entry.getKey(),entry.getValue(),null,null));
+			queue.add(new Node_1(entry.getKey(),entry.getValue(),null,null));
 			total_sum+=entry.getValue();
 		}
 		int queue_size = queue.size();
@@ -40,13 +40,13 @@ public class HuffmanEncoding
 		{	
 			if(queue.size()>1)
 			{
-				Node left_node = queue.poll();
-				Node right_node = queue.poll();
-				Node temp_root = new Node('\0',left_node.freq+right_node.freq,left_node,right_node);
+				Node_1 left_node = queue.poll();
+				Node_1 right_node = queue.poll();
+				Node_1 temp_root = new Node_1('\0',left_node.freq+right_node.freq,left_node,right_node);
 				queue.add(temp_root);
 			}
 		}
-		Node rootNode = queue.peek();
+		Node_1 rootNode = queue.peek();
 		int optimized_bits = 0;
 		for(char c : valid_keys)
 		{
@@ -91,7 +91,7 @@ public class HuffmanEncoding
 		
 	}
 
-	private static int lengthOfPathFromRoot(Node root, char c) {
+	private static int lengthOfPathFromRoot(Node_1 root, char c) {
 		if(root==null)
 			return 0;
 		else if(root.data==c)
@@ -103,7 +103,7 @@ public class HuffmanEncoding
 		return 0;
 	}
 
-	private static void printElements(Node poll,String path) {
+	private static void printElements(Node_1 poll,String path) {
 		if(poll.left!=null)
 			printElements(poll.left, path+"0");
 		if(poll.right!=null)
@@ -113,8 +113,8 @@ public class HuffmanEncoding
 	}
 }
 
-class Node implements Comparable<Node>{
-	Node(char data,int freq,Node left,Node right)
+class Node_1 implements Comparable<Node_1>{
+	Node_1(char data,int freq,Node_1 left,Node_1 right)
 	{
 		this.freq = freq;
 		this.data = data;
@@ -123,11 +123,11 @@ class Node implements Comparable<Node>{
 	}
 	int freq;
 	char data;
-	Node left;
-	Node right;
+	Node_1 left;
+	Node_1 right;
 	
 	@Override
-	public int compareTo(Node o) {
+	public int compareTo(Node_1 o) {
 		return this.freq-o.freq; 	
 	}
 }
