@@ -8,8 +8,6 @@ public class LongestCommongSubSeq {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		for(int k=0;k<n;k++) {
-			int a_s = sc.nextInt();
-			int b_s = sc.nextInt();
 			String a = sc.next();
 			String b = sc.next();
 			char [] a_ = a.toCharArray();
@@ -27,7 +25,7 @@ public class LongestCommongSubSeq {
 			}
 			System.out.println(lcq[a_.length][b_.length]);
 		}
-		
+		sc.close();
 		
 	}
 
