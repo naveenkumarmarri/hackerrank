@@ -1,5 +1,6 @@
 package com.practise.algos;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LongestCommongSubSeq {
@@ -23,6 +24,7 @@ public class LongestCommongSubSeq {
 					
 				}
 			}
+			
 			System.out.println(lcq[a_.length][b_.length]);
 		}
 		sc.close();
