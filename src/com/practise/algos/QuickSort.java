@@ -26,8 +26,8 @@ public class QuickSort {
 		
 		int temp = low-1;
 		int pivot = a[high];
-		for(int i=low+1; i< high; i++) {
-			if(pivot <= a[i]) {
+		for(int i=low; i< high; i++) {
+			if(pivot > a[i]) {
 				temp++;
 				int x = a[temp];
 				a[temp] = a[i];
