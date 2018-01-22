@@ -14,7 +14,7 @@ public class QuickSort {
 	}
 
 	private static void quickSort(int[] a, int low, int high) {
-		if(low < high) {
+			if(low < high) {
 			int pivot = partition(a, low, high);
 			quickSort(a, low, pivot - 1);
 			quickSort(a, pivot+1, high);
@@ -24,10 +24,10 @@ public class QuickSort {
 
 	private static int partition(int[] a, int low, int high) {
 		
-		int temp = low;
-		int pivot = a[low];
-		for(int i=low+1; i<= high; i++) {
-			if(pivot < a[i]) {
+		int temp = low-1;
+		int pivot = a[high];
+		for(int i=low+1; i< high; i++) {
+			if(pivot <= a[i]) {
 				temp++;
 				int x = a[temp];
 				a[temp] = a[i];
@@ -35,11 +35,11 @@ public class QuickSort {
 				
 			}
 		}
-		int y = a[temp-1];
-		a[temp-1] = a[pivot];
-		a[pivot] = y;
+		int y = a[temp+1];
+		a[temp+1] = a[high];
+		a[high] = y;
 		
-		return temp;
+		return temp+1;
 	}
 
 }
