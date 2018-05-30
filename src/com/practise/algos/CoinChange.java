@@ -3,8 +3,8 @@ package com.practise.algos;
 public class CoinChange {
 
 	public static void main(String[] args) {
-		int [] elements = {1,3,5};
-		int sum=100;
+		int [] elements = {1 ,2,3};
+		int sum=4;
 		int [] array = new int[sum+1];
 		for(int i=1;i<array.length;i++)
 			array[i] = Integer.MAX_VALUE;
