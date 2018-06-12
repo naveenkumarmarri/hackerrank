@@ -68,7 +68,7 @@ public class MergeSortedLL {
 	}
 	    public class ListNode {
 	    	      int val;
-	    	      ListNode next;
+	    	      public ListNode next;
 	    	      ListNode(int x) { val = x; }
 	    	 }
 }
