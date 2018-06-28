@@ -16,6 +16,8 @@ public class MinPathSum {
 	                sum[i][j] = grid[i][j] + Math.min(sum[i-1][j], sum[i][j-1]);
 	            }
 	        }
+	        String s = "a";
+	        System.out.println(s.subSequence(1, 1));
 	        return sum[m-1][n-1];
 	    }
 	}

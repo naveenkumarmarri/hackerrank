@@ -4,7 +4,9 @@ public class DuplicateElementsArray {
 
 	public static void main(String[] args) {
 		int [] a = {1,3,4,1,3};
-		System.out.println(fun(a,4));
+		//System.out.println(fun(a,4));
+		String s= "a";
+		System.out.println(s.substring(1, 2));
 		
 	}
 	public static int fun(int[]a,int right)

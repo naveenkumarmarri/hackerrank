@@ -6,8 +6,9 @@ public class AmazingStrings {
 		inp[0]="aab";
 		inp[1]="aaabccc";
 		inp[2]="aaabb";
-		for(int i:numChanges(inp))
-			System.out.println(i);
+		/*for(int i:numChanges(inp))
+			System.out.println(i);*/
+		
 	}
 
 	private static int[] numChanges(String[] inp) {
