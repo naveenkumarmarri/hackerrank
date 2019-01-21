@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +15,8 @@ class Test
           String [] map = new String[] {"Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"};
           String s = "1001011";
           System.out.println(s.substring(3, s.length()));
+          private SimpleDateFormat temp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
+          System.out.println(temp.format(new Date));
          //sumToTarget(set,map,0,0,n,"");
           
     }

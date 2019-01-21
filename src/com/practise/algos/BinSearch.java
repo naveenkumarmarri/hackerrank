@@ -10,6 +10,8 @@ public class BinSearch {
 			System.out.println(found+1);
 		else
 			System.out.println("Not found");
+		
+		
 
 	}
 

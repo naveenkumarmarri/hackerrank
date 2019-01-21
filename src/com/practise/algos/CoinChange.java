@@ -4,20 +4,19 @@ public class CoinChange {
 
 	public static void main(String[] args) {
 		int [] elements = {1 ,2,3};
-		int sum=4;
+		int sum=7;
 		int [] array = new int[sum+1];
 		for(int i=1;i<array.length;i++)
 			array[i] = Integer.MAX_VALUE;
 	
-		for(int i=0;i<array.length;i++)
-		{
-			for(int j=0;j<elements.length;j++)
-			{
-				if(elements[j]<=i && array[i-elements[j]]!=Integer.MAX_VALUE)
-				{
-					array[i] = Math.min(array[i-elements[j]],array[i])+1;
-				}
-				
+		//0,1,2,3,4,5,6,7
+		//0,1
+		//0,1,1
+		//0,1,1,1,2,2,2,3
+		for(int i=0;i<array.length;i++) {
+			for(int j=0;j<elements.length;j++) {
+				if(elements[j] <= i && array[i-elements[j]] != Integer.MAX_VALUE)
+					array[i] = Math.min(array[i-elements[j]], array[i])+1;
 			}
 		}
 		
